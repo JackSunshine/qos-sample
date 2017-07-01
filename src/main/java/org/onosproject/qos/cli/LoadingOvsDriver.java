@@ -30,7 +30,7 @@ import org.onosproject.net.config.basics.BasicDeviceConfig;
         description = "Qos Test.")
 public class LoadingOvsDriver extends AbstractShellCommand {
 
-    @Argument(index = 1, name = "ovsdbDeviceId", description = "the ovsdb device id.", required = true,
+    @Argument(index = 0, name = "ovsdbDeviceId", description = "the ovsdb device id.", required = true,
             multiValued = false)
     String ovsdbDeviceId = null;
 

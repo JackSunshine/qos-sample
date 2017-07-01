@@ -38,7 +38,7 @@ import java.util.Map;
         description = "Qos Test.")
 public class QoSQueryCommand extends AbstractShellCommand {
 
-    @Argument(index = 1, name = "controllerid", description = "the CONTROLLER TYPE device id.", required = true,
+    @Argument(index = 0, name = "controllerid", description = "the CONTROLLER TYPE device id.", required = true,
             multiValued = false)
     String controllerid = null;
 

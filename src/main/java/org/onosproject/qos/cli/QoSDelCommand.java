@@ -43,15 +43,15 @@ import org.onosproject.net.device.PortDescription;
         description = "Qos Test.")
 public class QoSDelCommand extends AbstractShellCommand {
 
-    @Argument(index = 1, name = "ovsdbDeviceId", description = "the ovsdb TYPE id.", required = true,
+    @Argument(index = 0, name = "ovsdbDeviceId", description = "the ovsdb TYPE id.", required = true,
             multiValued = false)
     String ovsdbDeviceId = null;
 
-    @Argument(index = 2, name = "queue and qos id", description = "queue and qos id.", required = true,
+    @Argument(index = 1, name = "queue and qos id", description = "queue and qos id.", required = true,
             multiValued = false)
     String id = null;
 
-    @Argument(index = 3, name = "port name", description = "the port name.", required = true,
+    @Argument(index = 2, name = "port name", description = "the port name.", required = true,
             multiValued = false)
     String portName = null;
 
