@@ -36,9 +36,6 @@ import org.onosproject.net.device.DefaultPortDescription;
 import org.onosproject.net.device.DeviceService;
 import org.onosproject.net.device.PortDescription;
 
-import java.util.HashMap;
-import java.util.Map;
-
 /**
  * Delete Qos Command.
  */

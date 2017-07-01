@@ -24,6 +24,9 @@
         <command>
             <action class="org.onosproject.qos.cli.QosQueryCommand"/>
         </command>
+        <command>
+            <action class="org.onosproject.qos.cli.LoadingOvsDriver"/>
+        </command>
     </command-bundle>
     <bean id="MacAddressCompleter" class="org.onosproject.fwd.MacAddressCompleter"/>
 </blueprint>
