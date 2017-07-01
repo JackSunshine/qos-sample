@@ -23,7 +23,6 @@ import org.apache.felix.scr.annotations.Service;
 import org.apache.felix.scr.annotations.ReferenceCardinality;
 import org.onosproject.core.ApplicationId;
 import org.onosproject.core.CoreService;
-import org.osgi.service.component.ComponentContext;
 import org.slf4j.Logger;
 
 import static org.slf4j.LoggerFactory.getLogger;
@@ -44,8 +43,7 @@ public class QoSConfigManager {
     private static final String APP_NAME = "org.onosproject.qos-sample";
 
     @Activate
-    public void activate(ComponentContext context) {
-
+    public void activate() {
         appId = coreService.registerApplication(APP_NAME);
         log.info("Started", appId.id());
     }
