@@ -17,12 +17,11 @@ package org.onosproject.qos.cli;
 
 import org.apache.karaf.shell.commands.Command;
 import org.onlab.osgi.DefaultServiceDirectory;
-import org.onlab.util.Bandwidth;
 import org.onosproject.cli.AbstractShellCommand;
 import org.apache.karaf.shell.commands.Argument;
 import org.onosproject.net.Device;
 import org.onosproject.net.DeviceId;
-import org.onosproject.net.Port;
+import org.onosproject.net.PortNumber;
 import org.onosproject.net.behaviour.DefaultQosDescription;
 import org.onosproject.net.behaviour.DefaultQueueDescription;
 import org.onosproject.net.behaviour.PortConfigBehaviour;
@@ -68,10 +67,7 @@ public class QoSDelCommand extends AbstractShellCommand {
                 .queueId(QueueId.queueId(id))
                 .build();
 
-        Port port = deviceService.getPorts(DeviceId.deviceId(ovsdbDeviceId))
-                .stream().filter(p -> p.number().name().equals(portName))
-                .findFirst().orElse(null);
-        PortDescription portDesc = new DefaultPortDescription(port.number(), true);
+        PortDescription portDesc = new DefaultPortDescription(PortNumber.portNumber(1, portName), true);
 
         QosDescription qosDesc = DefaultQosDescription.builder()
                 .qosId(QosId.qosId(id))

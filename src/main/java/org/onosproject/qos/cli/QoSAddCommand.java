@@ -21,7 +21,6 @@ import org.onosproject.cli.AbstractShellCommand;
 import org.apache.karaf.shell.commands.Argument;
 import org.onosproject.net.Device;
 import org.onosproject.net.DeviceId;
-import org.onosproject.net.Port;
 import org.onosproject.net.PortNumber;
 import org.onosproject.net.behaviour.DefaultQosDescription;
 import org.onosproject.net.behaviour.DefaultQueueDescription;
@@ -82,10 +81,7 @@ public class QoSAddCommand extends AbstractShellCommand {
                 .burst(Long.valueOf(burst))
                 .build();
 
-        Port port = deviceService.getPorts(DeviceId.deviceId(ovsdbDeviceId))
-                .stream().filter(p -> p.number().name().equals(portName))
-                .findFirst().orElse(null);
-        PortDescription portDesc = new DefaultPortDescription(port.number(), true);
+        PortDescription portDesc = new DefaultPortDescription(PortNumber.portNumber(1, portName), true);
 
         Map<Long, QueueDescription> queues = new HashMap<>();
         queues.put(0L, queueDesc);
