@@ -16,4 +16,5 @@ onos_app (
     category = 'Traffic Limiting',
     url = 'http://onosproject.org',
     description = 'QoS sample application using ovsdb protocol.',
+    required_apps = [ 'org.onosproject.ovsdb-base','org.onosproject.drivers.ovsdb' ],
 )
