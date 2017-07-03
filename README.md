@@ -19,7 +19,7 @@ This is a simple app about QoS on ONOS, you can run it by following these steps
    then start qos-sample app    
    app activate org.onosproject.qos-sample
    
-4. setup you OpenvSwitch with     
+4. setup your OpenvSwitch with     
    ovs-vsctl set-manager tcp:127.0.0.1     
    ovs-vsctl set-controller br0 tcp:127.0.0.1
    
